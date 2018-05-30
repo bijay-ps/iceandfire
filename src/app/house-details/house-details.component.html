@@ -9,7 +9,7 @@
   </button>
   <div class="card m-5">
     <div class="card-body">
-      Welcome to the <q><em>{{houseDetails.name}}</em></q>. It comes in the region of {{houseDetails.region}}. Flag of this house is {{houseDetails.coatOfArms}}
+      Welcome to the <q><em>{{houseDetails.name}}</em></q>. It comes in the region of {{houseDetails.region}}. <span *ngIf="houseDetails.coatOfArms">Flag of this house is {{houseDetails.coatOfArms}}</span>
       <p *ngIf="houseDetails.words">
         Word of <q><em>{{houseDetails.name}}</em></q> is: {{ houseDetails.words }}
       </p>
