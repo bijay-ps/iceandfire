@@ -12,6 +12,7 @@ import {BookModel} from '../models/book.model';
 export class BookDetailsComponent implements OnInit {
 
   bookDetails: any;
+  displayDetails: boolean;
   authors: string[];
 
   constructor(private apiService: ApiService,
@@ -19,6 +20,7 @@ export class BookDetailsComponent implements OnInit {
               private router: Router) { }
 
   ngOnInit() {
+    this.displayDetails = false;
     if (this.bookUrl.getbookurl()) {
       this.viewBookDetails(this.bookUrl.getbookurl());
     } else {
@@ -31,7 +33,7 @@ export class BookDetailsComponent implements OnInit {
       .subscribe((_resp: BookModel) => {
         this.bookDetails = _resp;
         this.authors = this.bookDetails.authors;
-        console.log(this.bookDetails);
+        this.displayDetails = true;
       });
   }
 

@@ -1,8 +1,15 @@
-<div class="mt-5">
-  <button class="btn btn-primary btn-lg" routerLink="/">Back</button>
+<div *ngIf="!displayDetails" class="loader">
+  <img src="../../assets/ajax-loader.gif" alt="loading...">
+</div>
+<div class="mt-5" *ngIf="displayDetails">
+  <button class="btn btn-primary btn-lg px-3" routerLink="/">
+    <div style="display: inline-block;padding-right: 15%;">
+      <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+    </div>Back
+  </button>
   <div class="card m-5">
     <div class="card-body">
-      The book {{bookDetails.name }} is written by:
+      In the <q><em>Game of Thrones</em></q> book series the book <q>{{bookDetails.name }}</q> is written by:
         <p *ngFor="let author of authors">{{ author }}</p>
       <p>And was published in the year {{bookDetails.released | date: 'yyyy'}} by {{ bookDetails.publisher }} publisher in {{ bookDetails.country }}.
          This book has total {{bookDetails.numberOfPages}} pages.

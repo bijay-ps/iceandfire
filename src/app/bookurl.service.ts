@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class BookurlService {
-
   private _bookurl: string;
 
   constructor() { }
@@ -14,4 +13,5 @@ export class BookurlService {
   setbookurl(value: string) {
     this._bookurl = value;
   }
+
 }

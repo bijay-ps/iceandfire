@@ -1,13 +1,5 @@
 <h1>All about <em>Game Of Thrones</em></h1>
-<div class="row">
-  <div class="col" *ngFor="let book of booksApiResp">
-    <div class="card c-books" style="width: 18rem;">
-      <div class="card-body">
-        <h5 class="card-title">{{ book.name }}</h5>
-        <h6 class="card-subtitle mb-2 text-muted">{{ book.released | date: 'dd-MMM-yyyy'}}</h6>
-        <p class="card-text">To see more details about this book click on below button.</p>
-        <button class="btn btn-success" (click)="viewBook(book.url, book.name)">View Details</button>
-      </div>
-    </div>
-  </div>
-</div>
+<h3><em>Books</em></h3>
+<app-books></app-books>
+
+
