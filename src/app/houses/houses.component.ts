@@ -26,8 +26,7 @@ export class HousesComponent implements OnInit {
       });
   }
 
-  viewHouse(url) {
-    console.log(url);
+  viewHouse(url, name) {
     this.houseUrl.sethouseurl(url);
     this.router.navigate(['/house', name]);
   }

@@ -7,7 +7,7 @@ import { HouseDetailsComponent } from './house-details/house-details.component';
 const appRoutes: Routes = [
   { path: '', component: GotListsComponent, pathMatch: 'full'},
   { path: 'book/:name', component: BookDetailsComponent},
-  { path: 'house/:name', component: HouseDetailsComponent},
+  { path: 'house/:housename', component: HouseDetailsComponent},
   { path: '**', redirectTo: ''}
 ];
 
