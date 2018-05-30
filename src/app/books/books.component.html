@@ -8,7 +8,7 @@
         <h5 class="card-title">{{ book.name }}</h5>
         <h6 class="card-subtitle mb-2 text-muted">{{ book.released | date: 'dd-MMM-yyyy'}}</h6>
         <p class="card-text">To see more details about this book click on below button.</p>
-        <button class="btn btn-success" (click)="viewBook(book.url, book.name)">View Details</button>
+        <button class="btn btn-primary" (click)="viewBook(book.url, book.name)">View Details</button>
       </div>
     </div>
   </div>

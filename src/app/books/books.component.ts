@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import {BookurlService} from '../bookurl.service';
+import {UrlService} from '../url.service';
 import {ApiService} from '../api.service';
 import {Router} from '@angular/router';
 import {BookModel} from '../models/book.model';
@@ -14,7 +14,7 @@ export class BooksComponent implements OnInit {
   displayBooks: boolean;
 
   constructor(private apiService: ApiService,
-              private bookUrl: BookurlService,
+              private bookUrl: UrlService,
               private router: Router) { }
 
   ngOnInit() {

@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ApiService } from '../api.service';
-import {BookurlService} from '../bookurl.service';
-import {Router} from '@angular/router';
-import {BookModel} from '../models/book.model';
+import { UrlService } from '../url.service';
+import { Router } from '@angular/router';
+import { BookModel } from '../models/book.model';
 
 @Component({
   selector: 'app-book-details',
@@ -16,7 +16,7 @@ export class BookDetailsComponent implements OnInit {
   authors: string[];
 
   constructor(private apiService: ApiService,
-              private bookUrl: BookurlService,
+              private bookUrl: UrlService,
               private router: Router) { }
 
   ngOnInit() {

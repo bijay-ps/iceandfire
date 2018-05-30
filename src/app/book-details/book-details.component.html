@@ -10,7 +10,7 @@
   <div class="card m-5">
     <div class="card-body">
       In the <q><em>Game of Thrones</em></q> book series the book <q>{{bookDetails.name }}</q> is written by:
-        <p *ngFor="let author of authors">{{ author }}</p>
+      <p *ngFor="let author of authors">{{ author }}</p>
       <p>And was published in the year {{bookDetails.released | date: 'yyyy'}} by {{ bookDetails.publisher }} publisher in {{ bookDetails.country }}.
          This book has total {{bookDetails.numberOfPages}} pages.
       </p>

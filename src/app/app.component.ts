@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {ApiService} from './api.service';
 import {a} from '@angular/core/src/render3';
-import {BookurlService} from './bookurl.service';
+import {UrlService} from './url.service';
 import {Router} from '@angular/router';
 
 @Component({

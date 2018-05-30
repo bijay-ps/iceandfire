@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class BookurlService {
+export class UrlService {
   private _bookurl: string;
+  private _houseurl: string;
 
   constructor() { }
 
@@ -14,4 +15,11 @@ export class BookurlService {
     this._bookurl = value;
   }
 
+  gethouseurl(): string {
+    return this._houseurl;
+  }
+
+  sethouseurl(value: string) {
+    this._houseurl = value;
+  }
 }

@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { ApiService } from './api.service';
 import { BookDetailsComponent } from './book-details/book-details.component';
 import { AppRoutingModule } from './app-routing.module';
-import {BookurlService} from './bookurl.service';
+import { UrlService } from './url.service';
 import { GotListsComponent } from './got-lists/got-lists.component';
 import { BooksComponent } from './books/books.component';
+import { HousesComponent } from './houses/houses.component';
+import { HouseDetailsComponent } from './house-details/house-details.component';
 
 
 @NgModule({
@@ -16,14 +18,16 @@ import { BooksComponent } from './books/books.component';
     AppComponent,
     BookDetailsComponent,
     GotListsComponent,
-    BooksComponent
+    BooksComponent,
+    HousesComponent,
+    HouseDetailsComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
     AppRoutingModule
   ],
-  providers: [ApiService, BookurlService],
+  providers: [ApiService, UrlService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

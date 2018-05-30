@@ -1,5 +1,5 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
-import {BookurlService} from '../bookurl.service';
+import {UrlService} from '../url.service';
 
 @Component({
   selector: 'app-got-lists',
@@ -8,9 +8,7 @@ import {BookurlService} from '../bookurl.service';
 })
 export class GotListsComponent implements OnInit {
 
-  displayBookResults = false;
-
-  constructor(private bookUrl: BookurlService) { }
+  constructor() { }
 
   ngOnInit() {
 

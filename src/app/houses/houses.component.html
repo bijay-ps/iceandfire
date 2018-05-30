@@ -1,0 +1,15 @@
+<div *ngIf="!displayHouses" class="loader">
+  <img src="../../assets/ajax-loader.gif" alt="loading...">
+</div>
+<div class="row" *ngIf="displayHouses">
+  <div class="col" *ngFor="let house of housesApiResp">
+    <div class="card c-houses" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">{{ house.name }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted"></h6>
+        <p class="card-text">To see more details about this house click on below button.</p>
+        <button class="btn btn-danger" (click)="viewHouse(house.url, house.name)">View Details</button>
+      </div>
+    </div>
+  </div>
+</div>

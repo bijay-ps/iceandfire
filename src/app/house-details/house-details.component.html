@@ -1,0 +1,30 @@
+<div *ngIf="!displayHouseDetails" class="loader">
+  <img src="../../assets/ajax-loader.gif" alt="loading...">
+</div>
+<div class="mt-5" *ngIf="displayHouseDetails">
+  <button class="btn btn-primary btn-lg px-3" routerLink="/">
+    <div style="display: inline-block;padding-right: 15%;">
+      <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+    </div>Back
+  </button>
+  <div class="card m-5">
+    <div class="card-body">
+      Welcome to the <q><em>{{houseDetails.name}}</em></q>. It comes in the region of {{houseDetails.region}}. Flag of this house is {{houseDetails.coatOfArms}}
+      <p *ngIf="houseDetails.words">
+        Word of <q><em>{{houseDetails.name}}</em></q> is: {{ houseDetails.words }}
+      </p>
+      <p *ngIf="houseDetails.titles[0] !== ''">
+        Titles of <q><em>{{houseDetails.name}}</em></q> are:
+      </p>
+      <ul>
+        <li *ngFor="let title of houseDetails.titles">{{ title }}</li>
+      </ul>
+      <p *ngIf="houseDetails.seats[0] !== ''">
+        Seats of <q><em>{{houseDetails.name}}</em></q> are:
+      </p>
+      <ul>
+        <li *ngFor="let seat of houseDetails.seats">{{ seat }}</li>
+      </ul>
+    </div>
+  </div>
+</div>
