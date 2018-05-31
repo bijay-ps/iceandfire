@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { BookModel } from './models/book.model';
 import { HouseModel } from './models/house.model';
+import {CharacterModel} from './models/character.model';
 
 @Injectable()
 export class ApiService {
@@ -22,5 +23,13 @@ export class ApiService {
 
   getHouseDetails(url: string) {
     return this.http.get<HouseModel>(url);
+  }
+
+  getGOTCharacters() {
+    return this.http.get<CharacterModel[]>('https://www.anapioficeandfire.com/api/characters');
+  }
+
+  getCharacterDetails(url: string) {
+    return this.http.get<CharacterModel>(url);
   }
 }

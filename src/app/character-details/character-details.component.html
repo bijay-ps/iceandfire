@@ -9,11 +9,14 @@
   </button>
   <div class="card m-5">
     <div class="card-body">
-      In the <q><em>Game of Thrones</em></q> book series the book <q>{{bookDetails.name }}</q> is written by:
-      <p *ngFor="let author of authors">{{ author }}</p>
-      <p>And was published in the year {{bookDetails.released | date: 'yyyy'}} by {{ bookDetails.publisher }} publisher in {{ bookDetails.country }}.
-         This book has total {{bookDetails.numberOfPages}} pages.
+      <strong>Character API is not returning much details as of now, few available things are:</strong>
+      <p>The character
+        <ng-container *ngIf="characterDetails.name !== ''">
+          {{ characterDetails.name }}
+        </ng-container>
+        is {{characterDetails.gender}}
       </p>
+      <p>Also known by the alias {{characterDetails.aliases[0]}}</p>
     </div>
   </div>
 </div>

@@ -11,6 +11,8 @@ import { GotListsComponent } from './got-lists/got-lists.component';
 import { BooksComponent } from './books/books.component';
 import { HousesComponent } from './houses/houses.component';
 import { HouseDetailsComponent } from './house-details/house-details.component';
+import { CharactersComponent } from './characters/characters.component';
+import { CharacterDetailsComponent } from './character-details/character-details.component';
 
 
 @NgModule({
@@ -20,7 +22,9 @@ import { HouseDetailsComponent } from './house-details/house-details.component';
     GotListsComponent,
     BooksComponent,
     HousesComponent,
-    HouseDetailsComponent
+    HouseDetailsComponent,
+    CharactersComponent,
+    CharacterDetailsComponent
   ],
   imports: [
     BrowserModule,
